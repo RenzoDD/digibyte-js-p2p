@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/RenzoDD/digibyte-p2p-js.git"
+    "url": "https://github.com/RenzoDD/digibyte-js-p2p.git"
   },
   "dependencies": {
     "digibyte-js": "^1.3.3",
