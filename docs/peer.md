@@ -7,14 +7,14 @@ Represents a node from the p2p bitcoin network. The Peer class supports connecti
 The code to create a new peer looks like this:
 
 ```javascript
-var Peer = require('bitcore-p2p').Peer;
+var Peer = require('digibyte-js-p2p').Peer;
 
 // default port
 var livenetPeer = new Peer({host: '5.9.85.34'});
 var testnetPeer = new Peer({host: '5.9.85.34', network: Networks.testnet});
 
 // custom port
-var livenetPeer = new Peer({host: '5.9.85.34', port: 8334});
+var livenetPeer = new Peer({host: '5.9.85.34', port: 12024});
 var testnetPeer = new Peer({host: '5.9.85.34', port: 18334, network: Networks.testnet});
 
 // use sock5 proxy (Tor)
@@ -33,7 +33,7 @@ A peer instance is always in one of the following states:
 You can subscribe to the change of those states as follows:
 
 ```javascript
-var Peer = require('bitcore-p2p').Peer;
+var Peer = require('digibyte-js-p2p').Peer;
 
 var peer = new Peer({host: '5.9.85.34'});
 
@@ -54,7 +54,7 @@ peer.connect();
 Once connected, a peer instance can send and receive messages. Every time a message arrives it's emitted as a new event. Let's see an example of this:
 
 ```javascript
-var Peer = require('bitcore-p2p').Peer;
+var Peer = require('digibyte-js-p2p').Peer;
 var peer = new Peer({host: '5.9.85.34'});
 
 // handle events
@@ -86,7 +86,7 @@ var Messages = p2p.Messages;
 var peer = new Peer({host: '5.9.85.34'});
 
 peer.on('ready', function() {
-  var message = new Messages.GetAddresses();
+  var message = new Messages.GetAddr();
   peer.sendMessage(message);
 });
 
