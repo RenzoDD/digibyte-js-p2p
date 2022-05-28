@@ -1,10 +1,10 @@
 {
   "name": "digibyte-js-p2p",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Interface to the bitcoin P2P network for bitcore",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node --no-deprecation test.js"
   },
   "keywords": [
     "bitcoin",
